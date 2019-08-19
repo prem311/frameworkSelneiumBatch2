@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Suite">
+	
+	<test name="FunctionalTest">
+		<parameter name="browserChrome" value="chrome"></parameter>
+		<parameter name="browserff" value="firefox"></parameter>
+		<parameter name="entryOne" value="Software"></parameter>
+		<parameter name="entryTwo" value="Machine Learning"></parameter>
+		<classes>
+			<class name="pageActions.CareersPageActions" /> 
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
