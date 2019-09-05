@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="62431" started-at="2019-09-03T02:41:39Z" finished-at="2019-09-03T02:42:42Z">
+  <suite name="Default suite" duration-ms="57584" started-at="2019-09-05T17:45:29 EDT" finished-at="2019-09-05T17:46:26 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="62431" started-at="2019-09-03T02:41:39Z" finished-at="2019-09-03T02:42:42Z">
-      <class name="com.chrisMensing.seleniumFramework.SendEmail">
-        <test-method status="PASS" signature="TestSendEmail(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean)[pri:0, instance:com.chrisMensing.seleniumFramework.SendEmail@77caeb3e]" name="TestSendEmail" duration-ms="24994" started-at="2019-09-03T02:41:40Z" data-provider="GmailTest" finished-at="2019-09-03T02:42:05Z">
+    <test name="Default test" duration-ms="57584" started-at="2019-09-05T17:45:29 EDT" finished-at="2019-09-05T17:46:26 EDT">
+      <class name="com.ChrisMensing.AmazonSeleniumFramework.TestSearch">
+        <test-method status="PASS" signature="SearchAscendum(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.ChrisMensing.AmazonSeleniumFramework.TestSearch@3224f60b]" name="SearchAscendum" duration-ms="56714" started-at="2019-09-05T17:45:30 EDT" data-provider="SearchTest" finished-at="2019-09-05T17:46:26 EDT">
           <params>
             <param index="0">
               <value>
@@ -16,80 +16,50 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[chriswolfplace.testAutomation@gmail.com]]>
+                <![CDATA[Automation Testing]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[123test!]]>
+                <![CDATA[img[alt='Master Selenium WebDriver programming fundamentals in Java: Also covers Basic Java programming, Eclipse,JUnit, Ant and Maven']]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Chriswolfplace.Test@gmail.com]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Test]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[This is a Test Email, It will be sent, Replied to, and then Deleted]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[true]]>
+                <![CDATA[css]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestSendEmail -->
-        <test-method status="PASS" signature="TestSendEmail(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean)[pri:0, instance:com.chrisMensing.seleniumFramework.SendEmail@77caeb3e]" name="TestSendEmail" duration-ms="36540" started-at="2019-09-03T02:42:05Z" data-provider="GmailTest" finished-at="2019-09-03T02:42:42Z">
+        </test-method> <!-- SearchAscendum -->
+        <test-method status="PASS" signature="SearchAscendum(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.ChrisMensing.AmazonSeleniumFramework.TestSearch@3224f60b]" name="SearchAscendum" duration-ms="28899" started-at="2019-09-05T17:45:30 EDT" data-provider="SearchTest" finished-at="2019-09-05T17:45:59 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Firefox]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[chriswolfplace.testAutomation@gmail.com]]>
+                <![CDATA[Ascendum]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[123test!]]>
+                <![CDATA[No Results]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Chriswolfplace.Test@gmail.com]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Test]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[This is a Test Email, It will be sent, Replied to, and then Deleted]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[true]]>
+                <![CDATA[No Results]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestSendEmail -->
-      </class> <!-- com.chrisMensing.seleniumFramework.SendEmail -->
+        </test-method> <!-- SearchAscendum -->
+      </class> <!-- com.ChrisMensing.AmazonSeleniumFramework.TestSearch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
