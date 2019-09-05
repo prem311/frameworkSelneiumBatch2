@@ -7,35 +7,34 @@ import org.openqa.selenium.support.FindBy;
 public class HomePageLocators 
 {
 	
-	@FindBy(id= "gb_70")
-	@CacheLookup
-	public static WebElement SignInButton;
+	@FindBy(id= "a-autoid-0-announce")
+	public WebElement SignInButton;
 	
-	@FindBy(xpath= "//*[@id='tsf']/div[2]/div/div[1]/div/div[1]/input")
+	@FindBy(id= "twotabsearchtextbox")
 	@CacheLookup
-	public static WebElement SearchBar;
+	public WebElement SearchBar;
 	
-	@FindBy(name= "btnK")
+	@FindBy(id= "nav-search-submit-text")
 	@CacheLookup
-	public static WebElement GoogleSearchButton;
+	public WebElement SearchButton;
 	
-	@FindBy(linkText= "Gmail")
+	@FindBy(id= "searchDropdownBox")
 	@CacheLookup
-	public static WebElement GmailButton;
+	public WebElement SearchDropdown;
 	
-	@FindBy(className= "gb_z")
+	@FindBy(id= "nav-cart")
 	@CacheLookup
-	public static WebElement Apps;
+	public WebElement Cart;
 	
-	@FindBy(partialLinkText= "Ascendum - A Global Digital")
+	@FindBy(id= "nav-orders")
 	@CacheLookup
-	public static WebElement AscendumLink;
+	public WebElement OrdersLink;
 	
-	@FindBy(xpath= "//*[@title='Google apps']")
+	@FindBy(id= "nav-link-accountList")
 	@CacheLookup
-	public static WebElement GoogleAppsButton;
+	public WebElement AccountDropDown;
 	
-	@FindBy(linkText= "Translate")
+	@FindBy(id= "nav-hamburger-menu")
 	@CacheLookup
-	public static WebElement TranslateApp;
+	public WebElement MainDropdown;
 }

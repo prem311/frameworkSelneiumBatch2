@@ -11,13 +11,13 @@ import resources.DataProviders;
 public class SignIn{
 
 	//I just call The method in the Data Providers class
-	@DataProvider(parallel = false, name = "LoginTest")
+	@DataProvider(parallel = true, name = "LoginTest")
 		public static Object[][] getLoginTestDetails(){
-			return DataProviders.getTestDetails("Google Test Logins", 4);
+			return DataProviders.getTestDetails("TestData.xlsx", "Amazon Test Logins", 4);
 	}
 
 	@Test(dataProvider = "LoginTest")
-	public void GoogleSignIn(String BroswerToLaunch, String Email, String Password, Boolean ValidLogin) 
+	public void SignInTest(String BroswerToLaunch, String Email, String Password, Boolean ValidLogin) 
 	{		
 		HomePage HomePageObj = new HomePage(BroswerToLaunch);
 		HomePageObj.ClickOnSignIn();
@@ -25,17 +25,16 @@ public class SignIn{
 		boolean SignInSuccess = false;
 		SignInSuccess = SignInObj.SignIn(Email, Password);
 		
-		//This will allow me to pass the sign in if it is a Negitive test
+		//This will allow me to pass the sign in if it is a Negative test
 		if(ValidLogin) 
 		{
-			Assert.assertTrue( SignInSuccess && ValidLogin);
+			Assert.assertTrue( SignInSuccess && SignInObj.IsUserSignedIn());
 		}
 		else 
 		{ 
 			Assert.assertFalse(SignInSuccess || ValidLogin);
 		}
+		
 		SignInObj.CloseDriver();
 	}
-	
-
 }

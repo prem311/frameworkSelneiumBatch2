@@ -1,7 +1,15 @@
 package com.chrisMensing.seleniumFramework.base;
 
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.chrisMensing.seleniumFramework.base.Methods.*;
@@ -9,6 +17,12 @@ import com.chrisMensing.seleniumFramework.base.Methods.ITestAction;
 
 //Basically this is the invoker of a Command Design Pattern, to create many commands, this also allows me to setup the base framework and allow others to add more methods without changing old ones. 
 public class MainMethods {
+	
+	public void MainMethods()
+	{
+		//TODO: Set Receiver 
+		
+	}
 	
 	public void ClickOnWebElement(WebElement ElementToClickOn) 
 	{

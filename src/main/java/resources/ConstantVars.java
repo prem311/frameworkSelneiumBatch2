@@ -23,23 +23,23 @@ public class ConstantVars {
 	
 	//Sets up Constant Vars
 	public ConstantVars(){
-		System.out.println("Init ConstantVars Class and Loading Properties");
-		try {
-			reader = new BufferedReader(new FileReader(PropertyFilePath));
-			properties = new Properties();
+		if (URL == null) {
+			System.out.println("Init ConstantVars Class and Loading Properties");
 			try {
-				properties.load(reader);
-				System.out.println("Reading Config File");
-				reader.close();
-			} catch (final IOException e) {e.printStackTrace();}
-		} catch (final FileNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException("Config.properties not found at " + PropertyFilePath);
+				reader = new BufferedReader(new FileReader(PropertyFilePath));
+				properties = new Properties();
+				try {
+					properties.load(reader);
+					System.out.println("Reading Config File");
+					reader.close();
+				} catch (final IOException e) {e.printStackTrace();}
+			} catch (final FileNotFoundException e) {
+				e.printStackTrace();
+				throw new RuntimeException("Config.properties not found at " + PropertyFilePath);
+			}
+			
+			URL =  properties.getProperty("URL");
 		}
-		
-		URL =  properties.getProperty("URL");
-
-		//}
 	}
 	
 

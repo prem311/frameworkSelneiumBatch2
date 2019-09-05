@@ -7,13 +7,16 @@ import com.chrisMensing.seleniumFramework.base.MainMethods;
 import com.chrisMensing.seleniumFramework.base.WedDriverBuilder;
 
 import resources.ConstantVars;
+import resources.Utils;
 
 public class PageSuper {
 	MainMethods MethodToPreform;
 	WebDriver Driver;
+	Utils UtilsObj;
 	
 	PageSuper(){
 		MethodToPreform = new MainMethods();
+		UtilsObj = new Utils();
 	}
 	
 	public WebDriver GetDriver(String BroswerToOpen) 

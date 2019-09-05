@@ -16,34 +16,42 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class POIUtils {
 
 	private static String DirPath = "\\src\\main\\java\\resources\\";
-	private static String ExcelFileName = "TestData.xlsx";
+	private String ExcelFileName = "TestData.xlsx";
 	private XSSFSheet ExcelSheet;
-    private static XSSFWorkbook ExcelBook;
+    private XSSFWorkbook ExcelBook;
 	
-    //Opens 
-	public static void OpenExcelFile() {
+    //Opens The excel File
+	public void OpenExcelFile() 
+	{
 		try {
 			DirPath = Paths.get(".").toAbsolutePath().normalize().toString() + DirPath;
 			FileInputStream ExcelFile = new FileInputStream(DirPath+ExcelFileName);
 			ExcelBook = new XSSFWorkbook(ExcelFile);
-			
 		}
-		catch(Exception e){
+		catch(Exception e)
+		{
+			//TODO: Add Logging
 		}
 		
 	}
-	public POIUtils(String SheetName){
-		if (ExcelBook == null) {
+	
+	//The Constructor takes the file name and sheet name then opens the excel file
+	public POIUtils(String FileName, String SheetName)
+	{
+		ExcelFileName = FileName;
+		if (ExcelBook == null) 
+		{
 			OpenExcelFile();
 		}
 		ExcelSheet = ExcelBook.getSheet(SheetName);
-		if (ExcelSheet == null) {
+		if (ExcelSheet == null) 
+		{
 			ExcelBook.createSheet(SheetName);
 			ExcelSheet = ExcelBook.getSheet(SheetName);
-			}
+		}
 	}
 	
-	
+	//Get A value from the cell
 	public Object GetCellValue(int RowNum, int CellNum) {
 			XSSFRow RowOBJ = ExcelSheet.getRow(RowNum);
 			if(RowOBJ == null) {
@@ -70,6 +78,7 @@ public class POIUtils {
 			}
 	}
 	
+	//Sets a Cell String Value
 	public void SetCellValue(int RowNum, int CellNum, String Value) {
 			XSSFRow RowOBJ = ExcelSheet.getRow(RowNum);
 			if(RowOBJ == null) {

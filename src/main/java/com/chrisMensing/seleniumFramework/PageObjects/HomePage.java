@@ -14,51 +14,40 @@ import com.chrisMensing.seleniumFramework.PageObjects.pageLocators.SignInPageLoc
 import com.chrisMensing.seleniumFramework.base.MainMethods;
 
 public class HomePage extends PageSuper{
-public WebDriver DriverToUse; 
+	HomePageLocators HomePageLocatorsObj;
 
+	//A homepage constructor that opens a new WebDriver.
 	public HomePage(String BrowserToOpen)
 	{
 		Driver = GetDriver(BrowserToOpen);
-		PageFactory.initElements(Driver, HomePageLocators.class);
-		DriverToUse = Driver;
+		HomePageLocatorsObj = new HomePageLocators();
+		PageFactory.initElements(Driver, HomePageLocatorsObj);
+	}
+	
+	//Overloaded Constructor to use when navigating back to the HomePage
+	public HomePage(WebDriver DriverToUse)
+	{
+		Driver = DriverToUse;
+		HomePageLocatorsObj = new HomePageLocators();
+		PageFactory.initElements(Driver, HomePageLocatorsObj);	
 	}
 	
 	public void SearchTerm(String StringToSearch) 
 	{
-		MethodToPreform.ClickOnWebElement(HomePageLocators.SearchBar);
-		MethodToPreform.SendKeyPress(HomePageLocators.SearchBar,StringToSearch + Keys.ENTER);
-	}
-	
-	public void CheckAscendumSearch()
-	{
-		SearchTerm("Ascendum");
-		MethodToPreform.ClickOnWebElement(HomePageLocators.AscendumLink);
-		Assert.assertEquals(DriverToUse.getTitle(), "Ascendum - A Global Digital Transformation Acceleration Firm in Cincinnati");
-	}
-	
-	public void ClickOnGmail()
-	{
-		Wait wait = new WebDriverWait(DriverToUse, 20); 
-		WebElement ElementtoUse =  (WebElement) wait.until(ExpectedConditions.visibilityOf(HomePageLocators.GmailButton));
-		MethodToPreform.ClickOnWebElement(ElementtoUse);
+		MethodToPreform.ClickOnWebElement(HomePageLocatorsObj.SearchBar);
+		MethodToPreform.SendKeyPress(HomePageLocatorsObj.SearchBar,StringToSearch + Keys.ENTER);
 	}
 	
 	public void ClickOnSignIn()
 	{
-		MethodToPreform.ClickOnWebElement(HomePageLocators.SignInButton);	
+		Wait wait = new WebDriverWait(Driver, 10); 
+		WebElement ElementtoUse =  (WebElement) wait.until(ExpectedConditions.visibilityOf(HomePageLocatorsObj.SignInButton));
+		MethodToPreform.ClickOnWebElement(HomePageLocatorsObj.SignInButton);	
 	}
 	
-	public void ClickOnGooogleApps()
+	public void GoToYourAccount ()
 	{
-		MethodToPreform.ClickOnWebElement(HomePageLocators.GoogleAppsButton);
+		MethodToPreform.ClickOnWebElement(HomePageLocatorsObj.AccountDropDown);
 	}
 	
-	public void ClickOnTranslateApp()
-	{
-		ClickOnGooogleApps();
-		Wait wait = new WebDriverWait(DriverToUse, 10); 
-		WebElement ElementtoUse =  (WebElement) wait.until(ExpectedConditions.visibilityOf(HomePageLocators.TranslateApp));
-		MethodToPreform.ClickOnWebElement(ElementtoUse);
-	}
-
 }
