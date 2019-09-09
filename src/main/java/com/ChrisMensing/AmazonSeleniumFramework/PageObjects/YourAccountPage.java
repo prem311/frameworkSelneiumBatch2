@@ -13,6 +13,7 @@ public class YourAccountPage extends PageSuper{
 		Driver = DriverToUse;
 		YourAccountPageLocatorsObj = new YourAccountPageLocators();
 		PageFactory.initElements(Driver, YourAccountPageLocatorsObj);
+		CurrentPageType = PageType.account;
 	}
 	
 	public void ClickOnSecurity()

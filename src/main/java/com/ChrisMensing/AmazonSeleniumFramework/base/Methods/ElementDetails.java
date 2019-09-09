@@ -3,9 +3,11 @@ package com.ChrisMensing.AmazonSeleniumFramework.base.Methods;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class GetElementText implements ITestAction
+public class ElementDetails extends methodSuper
 {
-	public Object Execute(WebElement WebElementToUse, Actions ActionToUse) {
+	public Object GetWebElementText(WebElement WebElementToUse) 
+	{
+		LogAction("Get Text", WebElementToUse);
 		return WebElementToUse.getText();
 	}
 }

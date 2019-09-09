@@ -7,7 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.ByChained;
 
+import com.ChrisMensing.AmazonSeleniumFramework.PageObjects.PageSuper.PageType;
 import com.ChrisMensing.AmazonSeleniumFramework.PageObjects.pageLocators.SearchPageLocators;
 
 public class SearchPage extends PageSuper{
@@ -18,6 +20,7 @@ public class SearchPage extends PageSuper{
 		Driver = DriverToUse;
 		SearchPageLocatorsObj = new SearchPageLocators();
 		PageFactory.initElements(Driver, SearchPageLocatorsObj);
+		CurrentPageType = PageType.Search;
 	}
 
 	//Loops though and looks for the search term, and populates the ResultsOfSearch if a match is found. 
@@ -86,6 +89,63 @@ public class SearchPage extends PageSuper{
 		
 		return ResultsOfSearch;
 	}
-	
+	public void SetProductSearchType(String ProductSearchType)
+	{
+		if (!ProductSearchType.equals("None")) {	
+			String ParentByString = "span[data-component-type='s-filters-panel-view']"; 
+			String ChildByString = ".//span[contains(text(),'"+ProductSearchType+"')]";
+			By ByLoc = new ByChained (By.cssSelector(ParentByString),By.xpath(ChildByString)); 
+			MethodToPreform.ClickOnWebElement(Driver.findElement(ByLoc));
+		}
+	}
+	public void SetSubSearchType(String SubSearchType)
+	{
+		if (!SubSearchType.equals("None")) {
+			String ParentByString = "span[data-component-type='s-filters-panel-view']"; 
+			String ChildByString = ".//span[contains(text(),'"+SubSearchType+"')]";
+			By ByLoc = new ByChained (By.cssSelector(ParentByString),By.xpath(ChildByString)); 
+			MethodToPreform.ClickOnWebElement(Driver.findElement(ByLoc));
+		}
+	}
+	public void SetAvgReviewStars(String NumberOfStars)
+	{
+		switch (NumberOfStars.toLowerCase())
+		{
+		case "Any":
+			break;
+		case "1 star":
+			MethodToPreform.ClickOnWebElement(SearchPageLocatorsObj.Av1Star);
+			break;
+		case "2 star":
+			MethodToPreform.ClickOnWebElement(SearchPageLocatorsObj.Av2Star);
+			break;
+		case "3 star":
+			MethodToPreform.ClickOnWebElement(SearchPageLocatorsObj.Av3Star);
+			break;
+		case "4 star":
+			MethodToPreform.ClickOnWebElement(SearchPageLocatorsObj.Av4Star);
+			break;
+		}
+	}
+	public void SetPrime()
+	{
+		MethodToPreform.ClickOnWebElement(SearchPageLocatorsObj.PrimeEligibleButton);
+	}
 
+	public void SetAdditionalSearchDetails(String AdditionalSearchDetails)
+	{
+		if (!AdditionalSearchDetails.equals("None")) {
+			//This will set any other additional Search Details
+			//TODO: Seperate the string by : so the user can add as many as they want
+			String ParentByString = "span[data-component-type='s-filters-panel-view']"; 
+			String ChildByString = ".//span[contains(text(),'"+AdditionalSearchDetails+"')]";
+			By ByLoc = new ByChained (By.cssSelector(ParentByString),By.xpath(ChildByString)); 
+			MethodToPreform.ClickOnWebElement(Driver.findElement(ByLoc));
+		}
+	}
+	
+	public List<WebElement> GetResultList()
+	{
+		return ResultsOfSearch;
+	}
 }

@@ -20,6 +20,7 @@ public class HomePage extends PageSuper{
 		Driver = GetDriver(BrowserToOpen);
 		HomePageLocatorsObj = new HomePageLocators();
 		PageFactory.initElements(Driver, HomePageLocatorsObj);
+		CurrentPageType = PageType.HomePage;
 	}
 	
 	//Overloaded Constructor to use when navigating back to the HomePage
@@ -28,6 +29,7 @@ public class HomePage extends PageSuper{
 		Driver = DriverToUse;
 		HomePageLocatorsObj = new HomePageLocators();
 		PageFactory.initElements(Driver, HomePageLocatorsObj);	
+		CurrentPageType = PageType.HomePage;
 	}
 	
 	public void SearchTerm(String StringToSearch) 

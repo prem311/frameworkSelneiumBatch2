@@ -38,20 +38,13 @@ public class POIUtils {
 		
 	}
 	
-	//The Constructor takes the file name and sheet name then opens the excel file
-	public POIUtils(String FileName, String SheetName)
+	//The Constructor takes the file name and opens the excel file
+	public POIUtils(String FileName)
 	{
 		ExcelFileName = FileName;
 		if (ExcelBook == null) 
 		{
 			OpenExcelFile();
-		}
-		ExcelSheet = ExcelBook.getSheet(SheetName);
-		if (ExcelSheet == null) 
-		{
-			ExcelBook.createSheet(SheetName);
-			ExcelSheet = ExcelBook.getSheet(SheetName);
-			Log.warn("Had to create a new sheet, if this was not intended stuff may break.");
 		}
 	}
 	
@@ -107,6 +100,36 @@ public class POIUtils {
 	
 	public int getLastRow() {
 		return ExcelSheet.getLastRowNum();
+	}
+	
+	public int getLastColumn(int RowToFind)
+	{
+		return ExcelSheet.getRow(RowToFind).getLastCellNum();
+	}
+	
+	public int GetRowWithCellValue(String ValueToFind, int ColumnToSearch)
+	{
+		for (Row row:ExcelSheet)
+		{
+			if (row.getCell(ColumnToSearch).getStringCellValue().equals(ValueToFind))
+			{
+				return row.getRowNum();
+			}
+		}
+		Log.error("No mathcing data found in Column: " + this);
+		return -1;
+	}
+
+	//This Opens the Tab
+	public void setTab(String tab) {
+		ExcelSheet = ExcelBook.getSheet(tab);
+		if (ExcelSheet == null) 
+		{
+			ExcelBook.createSheet(tab);
+			ExcelSheet = ExcelBook.getSheet(tab);
+			Log.warn("Had to create a new sheet, if this was not intended stuff may break.");
+		}
+		
 	}
 	
 }

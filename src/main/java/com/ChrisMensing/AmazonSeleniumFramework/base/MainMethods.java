@@ -7,68 +7,65 @@ import org.testng.Assert;
 
 import com.ChrisMensing.AmazonSeleniumFramework.base.Methods.*;
 
-//Basically this is the invoker of a Command Design Pattern, to create many commands, this also allows me to setup the base framework and allow others to add more methods without changing old ones. 
+//This is a Facade for the main Methods. 
 public class MainMethods {
-	
-	public void MainMethods()
-	{
-		//TODO: Set Receiver 
-		
-	}
-	
+
 	public void ClickOnWebElement(WebElement ElementToClickOn) 
 	{
-		ITestAction ActionToPreform = new ClickOnObject();
-		ActionToPreform.Execute(ElementToClickOn, null);
+		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
+		ActionObj.clickOnWebElement(ElementToClickOn);
 	}
 	
 	public void DoubleClickOnWebElement(WebElement ElementToClickOn, Actions action)
 	{
-		ITestAction ActionToPreform = new DoubleClickOnWebElement();
-		ActionToPreform.Execute(ElementToClickOn, action);
+		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
+		ActionObj.doubleClickOnWebElement(ElementToClickOn, action);
 	}
 	
 	public void RightClickOnWebElement(WebElement ElementToClickOn, Actions action)
 	{
-		ClickOnObject ActionToPreform = new ClickOnObject();
-		ActionToPreform.Execute(ElementToClickOn, action);
+		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
+		ActionObj.RightClickOnWebElement(ElementToClickOn, action);
 	}
 
-	
 	public void SendKeyPress(WebElement Element, CharSequence KeystoSend) 
 	{
-		SendKeys ActionToPreform = new SendKeys();
-		ActionToPreform.Execute(Element, KeystoSend);
+		ElementInputHandler ActionObj = new ElementInputHandler();
+		ActionObj.SendKeys(Element, KeystoSend);
 	}
 	
 	public String GetElementText(WebElement Element)
 	{
-		ITestAction ActionToPreform = new GetElementText();
-		return ActionToPreform.Execute(Element, null).toString();
+		ElementDetails ActionObj = new ElementDetails();
+		return ActionObj.GetWebElementText(Element).toString();
 	}
 	
 	//Clears the data
-	public static void fn_clear(WebElement Element)
+	public  void fn_clear(WebElement Element)
 	{
-		Element.clear();
+		ElementInputHandler ActionObj = new ElementInputHandler();
+		ActionObj.ClearData(Element);
 	}
 	
 	//Drag and drops the element
-	public static void dragAndDrop(WebElement Element, WebElement Element2, Actions action)
+	public void dragAndDrop(WebElement Element, WebElement Element2, Actions action)
 	{
-		action.dragAndDrop(Element, Element);
+		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
+		ActionObj.dragAndDrop(Element, Element2, action);
 	}
 
 	//Mouse hover on an element based on the target elment
-	public static void fn_mouseHOverTarget(WebElement Element, Actions action)
+	public void hoverMouseOverElement(WebElement Element, Actions action)
 	{
-		action.moveToElement(Element);
+		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
+		ActionObj.HoverMouseOverTarget(Element, action);
 	}
 	
 	//Asserts two elements
-	public static void fn_validateTwoElements(WebElement actual, WebElement expected) 
+	public void validateTwoElements(WebElement actual, WebElement expected) 
 	{
-		Assert.assertEquals(actual, expected);
+		VerifyElements ActionObj = new VerifyElements();
+		ActionObj.VerifyWebElements(actual, expected);
 	}
 
 	

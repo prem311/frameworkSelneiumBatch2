@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.ChrisMensing.AmazonSeleniumFramework.PageObjects.PageSuper.PageType;
 import com.ChrisMensing.AmazonSeleniumFramework.PageObjects.pageLocators.SignInPageLocators;
 import com.ChrisMensing.AmazonSeleniumFramework.Utils.Utils.OptionPaneType;
 
@@ -26,6 +27,7 @@ SignInPageLocators SignInPageLocatorsObj;
 		SignInPageLocatorsObj = new SignInPageLocators();
 		PageFactory.initElements(Driver, SignInPageLocatorsObj);
 		DriverToUse = Driver;
+		CurrentPageType = PageType.SignedOn;
 	}
 	
 	

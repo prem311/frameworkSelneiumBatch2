@@ -12,6 +12,8 @@ import com.ChrisMensing.AmazonSeleniumFramework.base.MainMethods;
 import com.ChrisMensing.AmazonSeleniumFramework.base.WedDriverBuilder;
 
 public class PageSuper {
+	public enum PageType {Search, product, HomePage, SignedOn, account}
+	public PageType CurrentPageType;
 	MainMethods MethodToPreform;
 	WebDriver Driver;
 	Utils UtilsObj;
@@ -49,6 +51,11 @@ public class PageSuper {
 	{
 		Log.info("Closing Driver");
 		Driver.close();
+	}
+	
+	public void StorePage()
+	{
+		ConstantVars.StorePage(CurrentPageType, this);
 	}
 	
 	@AfterSuite
