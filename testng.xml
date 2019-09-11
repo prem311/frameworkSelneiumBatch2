@@ -3,16 +3,9 @@
 
   <test name="RegressionTest">
     <classes>
-      <class name="com.chrisMensing.seleniumFramework.SignIn"/>
-      <class name="com.chrisMensing.seleniumFramework.SendEmail"/>
-      <class name="com.chrisMensing.seleniumFramework.TestSearch"/>
+      <class name="com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn"/>
+      <class name="com.ChrisMensing.AmazonSeleniumFramework.VerifySimpleSearch"/>
+      <class name="com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches"/>
     </classes>
   </test>
-  
-  <test name="TranslateTest">
-    <classes>
-      <class name="com.chrisMensing.seleniumFramework.Translate"/>
-    </classes>
-  </test>
-  
 </suite>

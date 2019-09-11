@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 import javax.swing.JFrame;
@@ -110,6 +111,11 @@ public class Utils {
 			
 			ConstantVars.URL =  ConstantVars.properties.getProperty("URL");
 		}
+	}
+	
+	public void SetTestDataSet (ArrayList<ArrayList<Object>> DataToPass)
+	{
+		
 	}
 	
 }

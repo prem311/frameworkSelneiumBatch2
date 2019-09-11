@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [chrisMensingsFramework]">
+  <test thread-count="5" name="RegressionTest(failed)">
     <classes>
+      <class name="com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn">
+        <methods>
+          <include name="SignInTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn -->
       <class name="com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches">
         <methods>
           <include name="FileteredSearch"/>
         </methods>
       </class> <!-- com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches -->
+      <class name="com.ChrisMensing.AmazonSeleniumFramework.VerifySimpleSearch">
+        <methods>
+          <include name="SearchAscendum"/>
+        </methods>
+      </class> <!-- com.ChrisMensing.AmazonSeleniumFramework.VerifySimpleSearch -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [chrisMensingsFramework] -->

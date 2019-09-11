@@ -3,6 +3,7 @@ package com.ChrisMensing.AmazonSeleniumFramework.base;
 import java.util.ArrayList;
 import java.util.Vector;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,7 +18,7 @@ public class WedDriverBuilder
 	protected WebDriver Driver;
 	public static Vector<WebDriver> Drivers = new Vector<WebDriver>();
 	private static ArrayList<String>WindowHandles;
-	private org.apache.log4j.Logger log = Utils.log;
+	private org.apache.log4j.Logger log = Logger.getRootLogger();
 	
 	public WedDriverBuilder(String BroswerToBuild) {
 		log.info("Starting Broswer : " + BroswerToBuild);

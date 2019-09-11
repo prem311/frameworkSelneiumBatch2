@@ -10,62 +10,70 @@ import com.ChrisMensing.AmazonSeleniumFramework.base.Methods.*;
 //This is a Facade for the main Methods. 
 public class MainMethods {
 
-	public void ClickOnWebElement(WebElement ElementToClickOn) 
+	public static void ClickOnWebElement(WebElement ElementToClickOn) 
 	{
 		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
 		ActionObj.clickOnWebElement(ElementToClickOn);
+		ActionObj = null;
 	}
 	
-	public void DoubleClickOnWebElement(WebElement ElementToClickOn, Actions action)
+	public static void DoubleClickOnWebElement(WebElement ElementToClickOn, Actions action)
 	{
 		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
 		ActionObj.doubleClickOnWebElement(ElementToClickOn, action);
+		ActionObj = null;
 	}
 	
-	public void RightClickOnWebElement(WebElement ElementToClickOn, Actions action)
+	public static void RightClickOnWebElement(WebElement ElementToClickOn, Actions action)
 	{
 		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
 		ActionObj.RightClickOnWebElement(ElementToClickOn, action);
+		ActionObj = null;
 	}
 
-	public void SendKeyPress(WebElement Element, CharSequence KeystoSend) 
+	public static void SendKeyPress(WebElement Element, CharSequence KeystoSend) 
 	{
 		ElementInputHandler ActionObj = new ElementInputHandler();
 		ActionObj.SendKeys(Element, KeystoSend);
+		ActionObj = null;
 	}
 	
-	public String GetElementText(WebElement Element)
+	public static String GetElementText(WebElement Element)
 	{
 		ElementDetails ActionObj = new ElementDetails();
 		return ActionObj.GetWebElementText(Element).toString();
 	}
 	
 	//Clears the data
-	public  void fn_clear(WebElement Element)
+	public static void fn_clear(WebElement Element)
 	{
 		ElementInputHandler ActionObj = new ElementInputHandler();
 		ActionObj.ClearData(Element);
+		ActionObj = null;
 	}
 	
 	//Drag and drops the element
-	public void dragAndDrop(WebElement Element, WebElement Element2, Actions action)
+	public static void dragAndDrop(WebElement Element, WebElement Element2, Actions action)
 	{
 		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
 		ActionObj.dragAndDrop(Element, Element2, action);
+		ActionObj = null;
 	}
 
 	//Mouse hover on an element based on the target elment
-	public void hoverMouseOverElement(WebElement Element, Actions action)
+	public static void hoverMouseOverElement(WebElement Element, Actions action)
 	{
 		ClickAndMouseHandler ActionObj = new ClickAndMouseHandler();
 		ActionObj.HoverMouseOverTarget(Element, action);
+		ActionObj = null;
 	}
 	
 	//Asserts two elements
-	public void validateTwoElements(WebElement actual, WebElement expected) 
+	public static void validateTwoElements(WebElement actual, WebElement expected) 
 	{
 		VerifyElements ActionObj = new VerifyElements();
 		ActionObj.VerifyWebElements(actual, expected);
+		ActionObj = null;
 	}
 
 	

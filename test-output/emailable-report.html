@@ -8,39 +8,63 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">536</td><td></td><td></td></tr>
+<tr><th colspan="7">chrisMensingsFramework</th></tr>
+<tr><td><a href="#t0">RegressionTest</a></td><td class="num">3</td><td class="num attn">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">125,644</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches</td><td><a href="#m0">FileteredSearch</a></td><td rowspan="1">1568178463525</td><td rowspan="1">513</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">chrisMensingsFramework</th></tr></tbody><tbody id="t0"><tr><th colspan="4">RegressionTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn</td><td><a href="#m0">SignInTest</a></td><td rowspan="1">1568231523837</td><td rowspan="1">124278</td></tr><tr><th colspan="4">RegressionTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches</td><td><a href="#m1">FileteredSearch</a></td><td rowspan="1">1568231648179</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">com.ChrisMensing.AmazonSeleniumFramework.VerifySimpleSearch</td><td><a href="#m2">SearchAscendum</a></td><td rowspan="1">1568231648169</td><td rowspan="1">0</td></tr><tr><th colspan="4">RegressionTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn</td><td><a href="#m3">SignInTest</a></td><td rowspan="3">1568231523837</td><td rowspan="3">70656</td></tr><tr class="passedeven"><td><a href="#m4">SignInTest</a></td></tr><tr class="passedeven"><td><a href="#m5">SignInTest</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches#FileteredSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
-[public void com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches.FileteredSearch(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: FileteredSearch([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.Boolean, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.Boolean, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String) Verify The book Master Selenium does not retrun result when Prime Eligible,(java.lang.String) Chrome,(org.apache.poi.xssf.usermodel.XSSFCell) ,(java.lang.String) Master Selenium WebDriver Book,(java.lang.String) Kindle Store,(java.lang.String) None,(java.lang.Boolean) true,(java.lang.String) 3 Star,(java.lang.String) Paperback,(java.lang.Boolean) false,(java.lang.String) Master Selenium WebDriver Book,(java.lang.String) img[alt=&apos;Master Selenium WebDriver programming fundamentals in Java: Also covers Basic Java programming, Eclipse,JUnit, Ant and Maven&apos;],(java.lang.String) css]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
-	at org.testng.internal.Parameters.injectParameters(Parameters.java:925)
-	at org.testng.internal.MethodRunner.runInParallel(MethodRunner.java:104)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:799)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<h2>RegressionTest</h2><h3 id="m0">com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn#SignInTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Verify valid Login On Chrome</td><td>Chrome</td><td>chriswolfplace.test@gmail.com</td><td>123test!</td><td>true</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#nav\-link\-accountList&quot;}
+  (Session info: chrome=76.0.3809.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ASC1514-BL-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\CHRIST~1.MEN\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59955}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d17452eb82381867b4c39461818a4549
+*** Element info: {Using=id, value=nav-link-accountList}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at com.ChrisMensing.AmazonSeleniumFramework.base.Methods.ClickAndMouseHandler.clickOnWebElement(ClickAndMouseHandler.java:10)
+	at com.ChrisMensing.AmazonSeleniumFramework.base.MainMethods.ClickOnWebElement(MainMethods.java:16)
+	at com.ChrisMensing.AmazonSeleniumFramework.PageObjects.HomePage.GoToYourAccount(HomePage.java:51)
+	at com.ChrisMensing.AmazonSeleniumFramework.PageObjects.SignInPage.IsUserSignedIn(SignInPage.java:86)
+	at com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn.SignInTest(VerifySignIn.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches#FileteredSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException
 	at java.util.ArrayList.forEach(ArrayList.java:1249)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+Caused by: java.lang.NullPointerException
+	at com.ChrisMensing.AmazonSeleniumFramework.Utils.POIUtils.setTab(POIUtils.java:135)
+	at com.ChrisMensing.AmazonSeleniumFramework.Utils.DataProviders.LoadSourceTabData(DataProviders.java:38)
+	at com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches.getLoginTestDetails(VerifyFilteredSearches.java:17)
+	... 25 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.ChrisMensing.AmazonSeleniumFramework.VerifySimpleSearch#SearchAscendum</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+Caused by: java.lang.NullPointerException
+	at com.ChrisMensing.AmazonSeleniumFramework.Utils.POIUtils.setTab(POIUtils.java:135)
+	at com.ChrisMensing.AmazonSeleniumFramework.Utils.DataProviders.LoadSourceTabData(DataProviders.java:38)
+	at com.ChrisMensing.AmazonSeleniumFramework.VerifySimpleSearch.getLoginTestDetails(VerifySimpleSearch.java:18)
+	... 25 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn#SignInTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Verify invalid Email On Chrome</td><td>Chrome</td><td>chriswolfplace.test1@gmail.com</td><td>123test!</td><td>false</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn#SignInTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Verify invalid Password On Chrome</td><td>Chrome</td><td>chriswolfplace.test@gmail.com</td><td>123test!1</td><td>false</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.ChrisMensing.AmazonSeleniumFramework.VerifySignIn#SignInTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Verify valid Login On Firefox</td><td>Firefox</td><td>chriswolfplace.test@gmail.com</td><td>123test!</td><td>true</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

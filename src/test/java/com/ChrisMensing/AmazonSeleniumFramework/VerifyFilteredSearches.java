@@ -10,12 +10,15 @@ import com.ChrisMensing.AmazonSeleniumFramework.Utils.DataProviders;
 
 public class VerifyFilteredSearches {
 
-	@DataProvider(parallel = true, name = "FilteredSearchTest")
+	//This is currently the only one I wouldn't run Parallel as it is a much bigger class. But it still runs and completes in about around 2 mins Parallel for the 3 included test
+	@DataProvider(parallel = false, name = "FilteredSearchTest")
 	public static Object[][] getLoginTestDetails(){
 		DataProviders FilterSearchTestDetails = new DataProviders("TestData.xlsx");
 		FilterSearchTestDetails.LoadSourceTabData("Filtered Searches");
 		FilterSearchTestDetails.LoadAddtionalInfoFromTab("Product ID", 3, 0, 0, 3);
-		return FilterSearchTestDetails.getTestDetails();
+		Object[][] Test = FilterSearchTestDetails.getTestDetails();
+		FilterSearchTestDetails = null;
+		return Test;
 }
 
 	@Test (dataProvider = "FilteredSearchTest" , groups= {"ResultsPrereq"})
@@ -41,6 +44,9 @@ public class VerifyFilteredSearches {
 		HomePage HomePageObj = new HomePage(Broswer);
 		HomePageObj.SearchTerm(SearchTerm);
 		SearchPage SearchPageObj = new SearchPage(HomePageObj.GetDriver());
+		//I wanted to do this for this test to reduce as much as I can, although it did not make a huge difference
+		HomePageObj = null;
+		System.gc();
 		
 		//Set The filters
 		SearchPageObj.SetProductSearchType(ProductSearchType);
@@ -54,6 +60,7 @@ public class VerifyFilteredSearches {
 		if (ResultType.equals("No Results")||!ShouldResultBeFound)
 		{
 			SearchPageObj.CloseDriver();
+			
 		}
 		else
 		{

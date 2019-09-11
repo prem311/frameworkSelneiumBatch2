@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.ChrisMensing.AmazonSeleniumFramework.PageObjects.pageLocators.HomePageLocators;
+import com.ChrisMensing.AmazonSeleniumFramework.base.MainMethods;
 
 public class HomePage extends PageSuper{
 	HomePageLocators HomePageLocatorsObj;
@@ -34,20 +35,20 @@ public class HomePage extends PageSuper{
 	
 	public void SearchTerm(String StringToSearch) 
 	{
-		MethodToPreform.ClickOnWebElement(HomePageLocatorsObj.SearchBar);
-		MethodToPreform.SendKeyPress(HomePageLocatorsObj.SearchBar,StringToSearch + Keys.ENTER);
+		MainMethods.ClickOnWebElement(HomePageLocatorsObj.SearchBar);
+		MainMethods.SendKeyPress(HomePageLocatorsObj.SearchBar,StringToSearch + Keys.ENTER);
 	}
 	
 	public void ClickOnSignIn()
 	{
 		Wait wait = new WebDriverWait(Driver, 10); 
 		WebElement ElementtoUse =  (WebElement) wait.until(ExpectedConditions.visibilityOf(HomePageLocatorsObj.SignInButton));
-		MethodToPreform.ClickOnWebElement(HomePageLocatorsObj.SignInButton);	
+		MainMethods.ClickOnWebElement(HomePageLocatorsObj.SignInButton);	
 	}
 	
 	public void GoToYourAccount ()
 	{
-		MethodToPreform.ClickOnWebElement(HomePageLocatorsObj.AccountDropDown);
+		MainMethods.ClickOnWebElement(HomePageLocatorsObj.AccountDropDown);
 	}
 	
 }

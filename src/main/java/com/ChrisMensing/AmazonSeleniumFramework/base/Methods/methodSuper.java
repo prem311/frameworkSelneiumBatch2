@@ -14,6 +14,7 @@ public class methodSuper {
 	
 	protected void LogAction (String ActionPreformed, WebElement PreformedOn)
 	{
+		//TODO: Fix Logger Error
 		//Had to remove, For some reason I am getting a Null Error when trying to log this way. Will add back in later. I think I just need to Set a named Logger for this as well. 
 		/*if (Log == null)
 		{

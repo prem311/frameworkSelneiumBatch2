@@ -8,20 +8,17 @@ import org.testng.annotations.AfterSuite;
 
 import com.ChrisMensing.AmazonSeleniumFramework.Utils.ConstantVars;
 import com.ChrisMensing.AmazonSeleniumFramework.Utils.Utils;
-import com.ChrisMensing.AmazonSeleniumFramework.base.MainMethods;
 import com.ChrisMensing.AmazonSeleniumFramework.base.WedDriverBuilder;
 
 public class PageSuper {
 	public enum PageType {Search, product, HomePage, SignedOn, account}
 	public PageType CurrentPageType;
-	MainMethods MethodToPreform;
 	WebDriver Driver;
-	Utils UtilsObj;
+
 	Logger Log = Logger.getRootLogger();
 	
 	PageSuper(){
-		MethodToPreform = new MainMethods();
-		UtilsObj = Utils.getInstance();
+		Utils.getInstance();
 		Log.info("Constucting Page Object :" + this);
 	}
 	
@@ -33,6 +30,7 @@ public class PageSuper {
 		Driver = NewDriver.GetBroswer();
 		Driver.manage().window().maximize();
 		Driver.get(ConstantVars.URL);
+		NewDriver = null;
 		}
 		return Driver;
 	}
