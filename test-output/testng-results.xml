@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="536" started-at="2019-09-11T01:07:43 EDT" finished-at="2019-09-11T01:07:44 EDT">
+    <groups>
+      <group name="ResultsPrereq">
+        <method signature="VerifyFilteredSearches.FileteredSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches@3224f60b]" name="FileteredSearch" class="com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches"/>
+      </group> <!-- ResultsPrereq -->
+    </groups>
+    <test name="Default test" duration-ms="536" started-at="2019-09-11T01:07:43 EDT" finished-at="2019-09-11T01:07:44 EDT">
+      <class name="com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches">
+        <test-method status="FAIL" signature="FileteredSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches@3224f60b]" name="FileteredSearch" duration-ms="513" started-at="2019-09-11T01:07:43 EDT" data-provider="FilteredSearchTest" finished-at="2019-09-11T01:07:44 EDT">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+[public void com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches.FileteredSearch(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: FileteredSearch([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.Boolean, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.Boolean, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) Verify The book Master Selenium does not retrun result when Prime Eligible,(java.lang.String) Chrome,(org.apache.poi.xssf.usermodel.XSSFCell) ,(java.lang.String) Master Selenium WebDriver Book,(java.lang.String) Kindle Store,(java.lang.String) None,(java.lang.Boolean) true,(java.lang.String) 3 Star,(java.lang.String) Paperback,(java.lang.Boolean) false,(java.lang.String) Master Selenium WebDriver Book,(java.lang.String) img[alt='Master Selenium WebDriver programming fundamentals in Java: Also covers Basic Java programming, Eclipse,JUnit, Ant and Maven'],(java.lang.String) css]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+[public void com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches.FileteredSearch(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: FileteredSearch([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.Boolean, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.Boolean, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) Verify The book Master Selenium does not retrun result when Prime Eligible,(java.lang.String) Chrome,(org.apache.poi.xssf.usermodel.XSSFCell) ,(java.lang.String) Master Selenium WebDriver Book,(java.lang.String) Kindle Store,(java.lang.String) None,(java.lang.Boolean) true,(java.lang.String) 3 Star,(java.lang.String) Paperback,(java.lang.Boolean) false,(java.lang.String) Master Selenium WebDriver Book,(java.lang.String) img[alt='Master Selenium WebDriver programming fundamentals in Java: Also covers Basic Java programming, Eclipse,JUnit, Ant and Maven'],(java.lang.String) css]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:925)
+at org.testng.internal.MethodRunner.runInParallel(MethodRunner.java:104)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:799)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1249)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FileteredSearch -->
+      </class> <!-- com.ChrisMensing.AmazonSeleniumFramework.VerifyFilteredSearches -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
