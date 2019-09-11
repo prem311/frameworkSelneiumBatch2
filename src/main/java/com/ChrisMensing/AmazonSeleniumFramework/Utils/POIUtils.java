@@ -109,6 +109,7 @@ public class POIUtils {
 	
 	public int GetRowWithCellValue(String ValueToFind, int ColumnToSearch)
 	{
+<<<<<<< HEAD
 		System.out.println(ValueToFind);
 		for (Row row:ExcelSheet)
 		{
@@ -128,6 +129,16 @@ public class POIUtils {
 			e.printStackTrace();
 			Log.error("No mathcing data found in Column: " + this);
 		}
+=======
+		for (Row row:ExcelSheet)
+		{
+			if (row.getCell(ColumnToSearch).getStringCellValue().equals(ValueToFind))
+			{
+				return row.getRowNum();
+			}
+		}
+		Log.error("No mathcing data found in Column: " + this);
+>>>>>>> branch 'ChrisMensing' of https://github.com/prem311/frameworkSelneiumBatch2
 		return -1;
 	}
 
